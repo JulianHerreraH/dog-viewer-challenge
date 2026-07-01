@@ -1,0 +1,84 @@
+#container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#main {
+  flex-basis: 80%;
+}
+
+#side-bar {
+  border: 1px solid white;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+}
+
+.dog-fav {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+}
+
+.select-fav {
+  background-color: unset;
+  border: unset;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.remove-fav {
+  cursor: pointer;
+}
+
+.dog-card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+}
+
+.dog-card img {
+  width: 300px;
+}
+
+.dog-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 8px;
+  margin-top: 16px;
+  gap: 10px;
+}
+
+.dog-grid button {
+  background-color: unset;
+  border: unset;
+  padding: 0;
+  cursor: pointer;
+}
+
+.dog-grid img {
+  width: 120px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.dog-grid img:hover {
+  transform: scale(1.4);
+}
+
+@media (max-width: 676px)  {
+
+  .dog-fav {
+    flex-direction: column;
+  }
+
+  .dog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center
+  }
+}
